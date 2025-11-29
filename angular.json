@@ -28,7 +28,12 @@
               "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
-              "src/CNAME"
+              "src/CNAME",
+              {
+                "glob": "404.html",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
