@@ -1,0 +1,140 @@
+.servicos-page {
+  background-color: var(--white);
+  padding: 80px 0;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-black);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.servico-card {
+  background-color: var(--white);
+  border: 2px solid var(--primary-yellow);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.servico-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+  border-color: var(--dark-yellow);
+}
+
+.servico-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.servico-icon i {
+  font-size: 3rem;
+  color: var(--primary-black);
+}
+
+.servico-card h3 {
+  color: var(--primary-black);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.servico-descricao {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+}
+
+.servico-detalhes {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.servico-detalhes li {
+  padding: 0.5rem 0;
+  color: var(--primary-black);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.servico-detalhes li i {
+  color: var(--primary-yellow);
+  font-size: 1.2rem;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-black), var(--dark-gray));
+  color: var(--primary-yellow);
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.cta-section h2 {
+  color: var(--primary-yellow);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.cta-section p {
+  color: var(--white);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.cta-section .btn {
+  background-color: var(--primary-yellow);
+  color: var(--primary-black);
+  font-size: 1.2rem;
+  padding: 15px 40px;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    padding: 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}
+

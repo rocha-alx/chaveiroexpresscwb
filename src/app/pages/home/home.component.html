@@ -1,0 +1,149 @@
+<section class="hero-section">
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      <div 
+        *ngFor="let servico of servicos; let i = index" 
+        class="carousel-slide" 
+        [class.active]="i === currentSlide"
+      >
+        <div class="slide-image" [style.background-image]="'url(' + servico.imagem + ')'" [attr.aria-label]="'Imagem de ' + servico.titulo"></div>
+        <div class="slide-content">
+          <div class="container">
+            <h2>{{ servico.titulo }}</h2>
+            <p>{{ servico.descricao }}</p>
+            <a routerLink="/servicos" class="btn">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Slide anterior">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <div class="carousel-indicators">
+      <button 
+        *ngFor="let servico of servicos; let i = index" 
+        class="indicator" 
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"
+        [attr.aria-label]="'Ir para slide ' + (i + 1)"
+      ></button>
+    </div>
+  </div>
+</section>
+
+<section class="features-section section">
+  <div class="container">
+    <h2 class="section-title">Por que escolher o Chaveiro Express?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Serviço Rápido</h3>
+        <p>Chegamos rápido ao local solicitado, sem demoras e com eficiência.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Profissionalismo</h3>
+        <p>Equipe qualificada e experiente, garantindo segurança e qualidade em cada serviço.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+        <h3>Preços Justos</h3>
+        <p>Valores transparentes e competitivos, sem custos ocultos ou surpresas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seo-content section">
+  <div class="container">
+    <article class="seo-article">
+      <h1>Chaveiro em Curitiba - Xaxim | Chaveiro Express 24 Horas</h1>
+      
+      <p class="lead-text">
+        O <strong>Chaveiro Express</strong> é especialista em serviços de <strong>chaveiro em Curitiba</strong>, 
+        especialmente no bairro <strong>Xaxim</strong>. Oferecemos atendimento rápido e profissional para todas 
+        as suas necessidades relacionadas a <strong>chaves, fechaduras e segurança</strong>.
+      </p>
+
+      <h2>Serviços de Chaveiro no Xaxim, Curitiba</h2>
+      <p>
+        Localizado na <strong>R. Waldemar Loureiro Campos, 3615 LJ05, Xaxim, Curitiba - PR</strong>, 
+        o Chaveiro Express é referência em serviços de chaveiro na região do Xaxim. Atendemos com 
+        urgência e eficiência todos os tipos de serviços relacionados a chaves e fechaduras em Curitiba.
+      </p>
+
+      <h3>Abertura de Portas em Curitiba</h3>
+      <p>
+        Precisa de <strong>abertura de portas em Curitiba</strong>? Estamos prontos para ajudar! 
+        Oferecemos serviço de abertura de portas residenciais e comerciais no Xaxim e toda região 
+        de Curitiba, sem danificar sua fechadura. Nossa equipe especializada utiliza técnicas modernas 
+        e seguras para resolver sua situação de forma rápida.
+      </p>
+
+      <h3>Cópia de Chaves no Xaxim</h3>
+      <p>
+        Realizamos <strong>cópia de chaves em Curitiba</strong>, com foco no atendimento no bairro Xaxim. 
+        Trabalhamos com todos os tipos de chaves: chaves comuns, chaves codificadas, chaves automotivas e 
+        muito mais. Garantimos precisão absoluta em cada cópia realizada.
+      </p>
+
+      <h3>Chaveiro Automotivo em Curitiba</h3>
+      <p>
+        Nosso serviço de <strong>chaveiro automotivo em Curitiba</strong> atende carros, motos e todos 
+        os tipos de veículos. Especializados em abertura de portas de carros, cópia de chaves automotivas, 
+        programação de chaves e emergências 24 horas. Atendemos toda a região de Curitiba, com destaque 
+        para o bairro Xaxim.
+      </p>
+
+      <h3>Instalação de Fechaduras em Curitiba</h3>
+      <p>
+        Oferecemos <strong>instalação e manutenção de fechaduras em Curitiba</strong>, tanto para residências 
+        quanto para estabelecimentos comerciais. Trabalhamos com fechaduras de segurança de última geração 
+        e sistemas eletrônicos, garantindo máxima proteção para seu imóvel no Xaxim e região.
+      </p>
+
+      <h3>Segurança Residencial e Comercial</h3>
+      <p>
+        Somos especialistas em <strong>segurança residencial e comercial em Curitiba</strong>. Oferecemos 
+        consultoria, instalação de sistemas de segurança, manutenção de portões automáticos e instalação 
+        de trancas especiais. Atendemos com excelência no bairro Xaxim e toda região metropolitana de Curitiba.
+      </p>
+
+      <h2>Chaveiro 24 Horas em Curitiba</h2>
+      <p>
+        O Chaveiro Express funciona de <strong>Segunda a Sexta das 09:00 às 20:00</strong> e 
+        <strong>Sábados das 09:00 às 15:00</strong>. Para emergências, também atendemos em horários 
+        diferenciados. Estamos localizados estrategicamente no Xaxim para atender rapidamente toda 
+        a região de Curitiba.
+      </p>
+
+      <h2>Por que escolher o Chaveiro Express no Xaxim?</h2>
+      <ul class="seo-list">
+        <li><strong>Localização privilegiada:</strong> Estamos no coração do Xaxim, Curitiba - PR</li>
+        <li><strong>Atendimento rápido:</strong> Chegamos rápido em qualquer ponto de Curitiba</li>
+        <li><strong>Profissionais qualificados:</strong> Equipe experiente e treinada</li>
+        <li><strong>Preços justos:</strong> Valores transparentes e competitivos</li>
+        <li><strong>Variedade de serviços:</strong> Atendemos todas as necessidades de chaveiro</li>
+        <li><strong>Atendimento personalizado:</strong> Foco na satisfação do cliente</li>
+      </ul>
+
+      <p class="cta-text">
+        Precisa de um <strong>chaveiro perto de você em Curitiba</strong>? Entre em contato com o 
+        <strong>Chaveiro Express</strong> no Xaxim através do WhatsApp <strong>(41) 98420-2450</strong> 
+        ou visite nossa loja na R. Waldemar Loureiro Campos, 3615 LJ05, Xaxim, Curitiba - PR.
+      </p>
+    </article>
+  </div>
+</section>
+

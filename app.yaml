@@ -1,0 +1,15 @@
+runtime: nodejs18
+
+handlers:
+  - url: /
+    static_files: dist/chaveiro-express/browser/index.html
+    upload: dist/chaveiro-express/browser/index.html
+
+  - url: /(.*)
+    static_files: dist/chaveiro-express/browser/\1
+    upload: dist/chaveiro-express/browser/(.*)
+
+  - url: /.*
+    static_files: dist/chaveiro-express/browser/index.html
+    upload: dist/chaveiro-express/browser/index.html
+

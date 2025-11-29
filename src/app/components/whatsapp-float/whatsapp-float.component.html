@@ -1,0 +1,19 @@
+<div class="whatsapp-float" (click)="togglePopup()">
+  <div class="whatsapp-button">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+  <div class="whatsapp-popup" [class.expanded]="isExpanded">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+      <div class="popup-header">
+        <i class="fab fa-whatsapp"></i>
+        <h3>Precisa de ajuda?</h3>
+      </div>
+      <p>Entre em contato conosco pelo WhatsApp!</p>
+      <button class="whatsapp-btn" (click)="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+        Abrir WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<section class="servicos-page section">
+  <div class="container">
+    <h1 class="page-title">Nossos Serviços</h1>
+    <p class="page-subtitle">Oferecemos soluções completas em serviços de chaveiro com profissionalismo e agilidade</p>
+    
+    <div class="servicos-grid">
+      <div *ngFor="let servico of servicos" class="servico-card">
+        <div class="servico-icon">
+          <i [class]="servico.icone"></i>
+        </div>
+        <h3>{{ servico.titulo }}</h3>
+        <p class="servico-descricao">{{ servico.descricao }}</p>
+        <ul class="servico-detalhes">
+          <li *ngFor="let detalhe of servico.detalhes">
+            <i class="fas fa-check-circle"></i>
+            {{ detalhe }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="cta-section">
+      <h2>Precisa de algum serviço?</h2>
+      <p>Entre em contato conosco e solicite um orçamento sem compromisso</p>
+      <a routerLink="/contato" class="btn">Fale Conosco</a>
+    </div>
+  </div>
+</section>
+

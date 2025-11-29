@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a routerLink="/" (click)="closeMenu()">
+          <img src="assets/Logo.png" alt="Chaveiro Express" class="logo-img">
+        </a>
+      </div>
+      <nav class="nav" [class.menu-open]="isMenuOpen">
+        <ul class="nav-list">
+          <li><a routerLink="/inicio" routerLinkActive="active" (click)="closeMenu()">Início</a></li>
+          <li><a routerLink="/servicos" routerLinkActive="active" (click)="closeMenu()">Serviços</a></li>
+          <li><a routerLink="/contato" routerLinkActive="active" (click)="closeMenu()">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" [class.active]="isMenuOpen" (click)="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="menu-overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
+</header>
+
