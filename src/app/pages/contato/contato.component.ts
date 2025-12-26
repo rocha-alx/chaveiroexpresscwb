@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -6,10 +6,14 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-contato',
   standalone: true,
   imports: [CommonModule, FormsModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './contato.component.html',
   styleUrl: './contato.component.css'
 })
-export class ContatoComponent {
+export class ContatoComponent implements AfterViewInit {
+  @ViewChild('storeLocator', { static: false }) storeLocatorRef!: ElementRef;
+  
+  googleMapsApiKey = 'AIzaSyD8ExJ5_-9v6Fg8ODKa9w8-LyMXSq2KOFs';
   whatsappNumber = '5541984202450';
   
   endereco = {
@@ -101,6 +105,89 @@ export class ContatoComponent {
   enviarEmail() {
     const url = `mailto:${this.email}?subject=Contato%20-%20Chaveiro%20Express`;
     window.open(url);
+  }
+
+  ngAfterViewInit() {
+    // Aguarda o DOM estar pronto e os componentes customizados serem carregados
+    setTimeout(() => {
+      this.initializeStoreLocator();
+    }, 500);
+  }
+
+  initializeStoreLocator() {
+    // Verifica se os custom elements estão disponíveis
+    if (typeof customElements === 'undefined') {
+      console.warn('Custom Elements não estão disponíveis');
+      return;
+    }
+
+    // Aguarda o componente gmpx-store-locator estar definido
+    customElements.whenDefined('gmpx-store-locator').then(() => {
+      setTimeout(() => {
+        this.configureStoreLocator();
+      }, 100);
+    }).catch(() => {
+      // Se não estiver definido, tenta configurar após um delay maior
+      setTimeout(() => {
+        this.configureStoreLocator();
+      }, 2000);
+    });
+  }
+
+  configureStoreLocator() {
+    const locator = this.storeLocatorRef?.nativeElement;
+    if (!locator) {
+      console.warn('Store locator element não encontrado');
+      return;
+    }
+
+    const CONFIGURATION = {
+      "locations": [
+        {
+          "title": "Chaveiro Express",
+          "address1": this.endereco.rua,
+          "address2": `${this.endereco.bairro}, ${this.endereco.cidade}`,
+          "coords": {
+            "lat": -25.5113191,
+            "lng": -49.2565485
+          },
+          "placeId": "ChIJ3WkzmbL73JQR1ER2gIi2HhU"
+        }
+      ],
+      "mapOptions": {
+        "center": {
+          "lat": -25.5113191,
+          "lng": -49.2565485
+        },
+        "fullscreenControl": true,
+        "mapTypeControl": false,
+        "streetViewControl": false,
+        "zoom": 15,
+        "zoomControl": true,
+        "maxZoom": 17,
+        "mapId": ""
+      },
+      "mapsApiKey": this.googleMapsApiKey,
+      "capabilities": {
+        "input": true,
+        "autocomplete": true,
+        "directions": false,
+        "distanceMatrix": true,
+        "details": false,
+        "actions": false
+      }
+    };
+
+    // Verifica se o método configureFromQuickBuilder existe
+    if (locator && typeof locator.configureFromQuickBuilder === 'function') {
+      try {
+        locator.configureFromQuickBuilder(CONFIGURATION);
+      } catch (error) {
+        console.error('Erro ao configurar o Store Locator:', error);
+      }
+    } else {
+      console.warn('Método configureFromQuickBuilder não está disponível');
+    }
   }
 }
 

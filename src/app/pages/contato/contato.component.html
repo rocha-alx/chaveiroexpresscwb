@@ -115,6 +115,21 @@
         </form>
       </div>
     </div>
+    
+    <!-- Google Maps Store Locator -->
+    <div class="map-container">
+      <h2 class="map-title">Encontre-nos no Mapa</h2>
+      <div class="store-locator-wrapper">
+        <gmpx-api-loader 
+          [key]="googleMapsApiKey" 
+          solution-channel="GMP_QB_locatorplus_v11_cABD">
+        </gmpx-api-loader>
+        <gmpx-store-locator 
+          map-id="DEMO_MAP_ID"
+          #storeLocator>
+        </gmpx-store-locator>
+      </div>
+    </div>
   </div>
 </section>
 
