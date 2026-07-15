@@ -28,6 +28,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
+              "src/sitemap.xml",
               "src/CNAME",
               {
                 "glob": "404.html",

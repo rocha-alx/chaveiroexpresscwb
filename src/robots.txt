@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://chaveiroexpress.com.br/sitemap.xml
+Sitemap: https://chaveiroexpresscwb.com.br/sitemap.xml
 
