@@ -8,8 +8,8 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent,
     data: {
-      title: 'Chaveiro Express 24h em Curitiba | Xaxim',
-      description: 'Chaveiro Express no Xaxim, Curitiba. Atendimento rápido em raio de 10km para abertura de portas, cópia de chaves, chaveiro automotivo e instalação de fechaduras.',
+      title: 'Chaveiro em Curitiba | Chaveiro Express no Xaxim 24h',
+      description: 'Chaveiro Express no Xaxim, Curitiba. Atendimento rápido para abertura de portas, cópia de chaves, chaveiro automotivo, instalação de fechaduras e segurança em raio de 10km.',
       canonical: 'https://chaveiroexpresscwb.com.br/'
     }
   },

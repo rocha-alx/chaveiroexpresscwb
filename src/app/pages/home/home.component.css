@@ -134,6 +134,30 @@
   background-color: var(--light-gray);
 }
 
+.intro-seo {
+  background: linear-gradient(135deg, #fff8d8, #ffffff);
+}
+
+.seo-intro-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.seo-intro-card h2 {
+  color: var(--primary-black);
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+}
+
+.seo-intro-card p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
