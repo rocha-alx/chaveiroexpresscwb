@@ -34,10 +34,13 @@ jobs:
       - name: Build
         run: npm run build:prod
 
-      - name: Copy 404.html for SPA routing
+      - name: Copy 404.html and route fallback files for SPA routing
         run: |
           cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/404.html || true
-          # Se o 404.html já foi copiado pelo build, não precisa fazer nada
+          mkdir -p dist/chaveiro-express/browser/servicos dist/chaveiro-express/browser/contato dist/chaveiro-express/browser/inicio
+          cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/servicos/index.html
+          cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/contato/index.html
+          cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/inicio/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
