@@ -38,7 +38,20 @@
     gtag('js', new Date());
     gtag('config', 'AW-18268662536');
   </script>
-  
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url !== 'undefined' && url) {
+          window.location.href = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18268662536/LpInCKbRrNAcEIjWlodE',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>  
   <!-- SEO Meta Tags Otimizadas -->
   <meta name="description" content="Chaveiro Express em Curitiba, bairro Xaxim. Atendimento em raio de 10km: abertura de portas, cópia de chaves, chaveiro automotivo, instalação de fechaduras. Serviço rápido 24h no Xaxim e região. WhatsApp (41) 98420-2450.">
   <meta name="keywords" content="chaveiro curitiba, chaveiro xaxim, chaveiro 24 horas curitiba, abertura de portas curitiba, cópia de chaves xaxim, chaveiro automotivo curitiba, chaveiro em curitiba, chaveiro próximo, chaveiro perto de mim, chaveiro xaxim curitiba, chaveiro express, abertura de fechaduras, chaveiro residencial, chaveiro comercial, chaveiro raio 10km, chaveiro xaxim 10km, chaveiro próximo xaxim, chaveiro perto xaxim, chaveiro região xaxim, chaveiro bairros próximos xaxim, chaveiro boa vista, chaveiro água verde, chaveiro portão, chaveiro santa felicidade, chaveiro campo comprido, chaveiro novo mundo, chaveiro bigorrilho, chaveiro centro cívico">

@@ -63,6 +63,11 @@ export class ContatoComponent implements AfterViewInit {
     
     // Cria a URL do WhatsApp
     const url = `https://wa.me/${this.whatsappNumber}?text=${mensagem}`;
+
+    if (typeof (window as any).gtag_report_conversion === 'function') {
+      (window as any).gtag_report_conversion(url);
+      return;
+    }
     
     // Detecta se é dispositivo móvel
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -84,6 +89,10 @@ export class ContatoComponent implements AfterViewInit {
 
   abrirWhatsApp() {
     const url = `https://wa.me/${this.whatsappNumber}`;
+    if (typeof (window as any).gtag_report_conversion === 'function') {
+      (window as any).gtag_report_conversion(url);
+      return;
+    }
     window.open(url, '_blank');
   }
 
