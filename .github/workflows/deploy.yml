@@ -41,6 +41,8 @@ jobs:
           cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/servicos/index.html
           cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/contato/index.html
           cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/inicio/index.html
+          cp dist/chaveiro-express/browser/index.html dist/chaveiro-express/browser/index.html || true
+          find dist/chaveiro-express/browser -maxdepth 2 -type f | sort
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
