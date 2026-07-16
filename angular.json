@@ -31,6 +31,21 @@
               "src/sitemap.xml",
               "src/CNAME",
               {
+                "glob": "chaveiro-residencial.html",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "chaveiro-automotivo.html",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "assistencia-celular-computadores.html",
+                "input": "src",
+                "output": "/"
+              },
+              {
                 "glob": "404.html",
                 "input": "src",
                 "output": "/"
