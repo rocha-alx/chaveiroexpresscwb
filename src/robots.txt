@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://chaveiroexpresscwb.com.br/sitemap.xml
-
