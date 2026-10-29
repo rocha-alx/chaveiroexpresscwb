@@ -14,7 +14,7 @@ export class ContatoComponent implements AfterViewInit {
   @ViewChild('storeLocator', { static: false }) storeLocatorRef!: ElementRef;
   
   googleMapsApiKey = 'AIzaSyD8ExJ5_-9v6Fg8ODKa9w8-LyMXSq2KOFs';
-  whatsappNumber = '5541984202450';
+  whatsappNumber = '5541985227971';
   
   endereco = {
     rua: 'R. Waldemar Loureiro Campos, 3615 LJ05',
