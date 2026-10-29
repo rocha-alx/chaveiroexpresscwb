@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class WhatsappFloatComponent {
   // Substitua pelo número real do WhatsApp da loja
   // Formato: 5511999999999 (código do país + DDD + número)
-  whatsappNumber = '5541984202450';
+  whatsappNumber = '5541985227971';
   
   isExpanded = false;
 
